@@ -5,7 +5,6 @@ import main_padding from "@/styles/padding";
 import { HeadSubtitle, HeadTitle } from "@/ui/Typography";
 import React, { useRef } from "react";
 
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 

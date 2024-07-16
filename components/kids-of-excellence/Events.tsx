@@ -3,8 +3,6 @@ import main_padding from "@/styles/padding";
 import React from "react";
 import LeftContentRightImg from "@/ui/LeftContentRightImg";
 
-
-
 const Events = ({ data }: { data: KidsOfExcellenceType }) => {
   return (
     <SectionWrapper

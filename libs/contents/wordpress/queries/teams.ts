@@ -1,4 +1,3 @@
-
 const teams = `
 {
   teams {
@@ -41,6 +40,6 @@ const teams = `
     }
   }
 }
-`
+`;
 
-export default teams
+export default teams;

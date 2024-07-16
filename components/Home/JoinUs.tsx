@@ -28,7 +28,7 @@ const JoinUs = ({ data }: { data: HomePageType }) => {
           </HeadTitle>
           <HeadSubtitle className="text-center text-off-white mt-8 leading-[200%]">
             {descriptionExtractor(
-              data.page.acf.seventhSectionJoinus.description
+              data.page.acf.seventhSectionJoinus.description,
             )}
           </HeadSubtitle>
           {data.page.acf.seventhSectionJoinus.button.title && (

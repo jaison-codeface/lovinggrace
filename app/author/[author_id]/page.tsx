@@ -19,7 +19,7 @@ import React from "react";
 const page = async ({ params }: any) => {
   const data: BlogsBySlugType = await getPageContent(
     "blogs-by-slug",
-    params.author_id
+    params.author_id,
   );
 
   if (!data) return <Loading />;

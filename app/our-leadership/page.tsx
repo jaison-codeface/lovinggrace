@@ -73,7 +73,7 @@ const Page = async () => {
                   </h2>
                   <HeadSubtitle className="mt-2">
                     {descriptionExtractor(
-                      item.node.acf.teamMemberDetails.details
+                      item.node.acf.teamMemberDetails.details,
                     )}
                   </HeadSubtitle>
 
@@ -103,7 +103,7 @@ const Page = async () => {
                               >
                                 {btn.title}
                               </NormalBtn>
-                            )
+                            ),
                           )}
                         </div>
                       </div>
@@ -131,7 +131,7 @@ const Page = async () => {
                                 className="h-[14px] w-auto object-contain"
                               />
                             </Link>
-                          )
+                          ),
                         )}
                       </div>
 

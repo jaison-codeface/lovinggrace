@@ -9,7 +9,7 @@ import Loading from "@/app/loading";
 
 const page = async () => {
   const data: ManOfValourType = await getPageContent("man-of-valour");
-  
+
   if (!data) return <Loading />;
   return (
     <>
@@ -19,7 +19,7 @@ const page = async () => {
         logo={data.page.acf.secondSection.logo.sourceUrl}
         button={{
           title: data.page.acf.secondSection.buttonText,
-          link: data.page.acf.secondSection.buttonLink
+          link: data.page.acf.secondSection.buttonLink,
         }}
       />
       <Features data={data} />

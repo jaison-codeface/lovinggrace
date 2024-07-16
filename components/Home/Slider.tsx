@@ -38,11 +38,13 @@ const Guiding = ({ data }: { data: HomePageType }) => {
             delay: 3500,
           }}
           speed={1200}
-          navigation={{
-            // enabled: true,
-            // prevEl: navigationPrevRef.current,
-            // nextEl: navigationNextRef.current,
-          }}
+          navigation={
+            {
+              // enabled: true,
+              // prevEl: navigationPrevRef.current,
+              // nextEl: navigationNextRef.current,
+            }
+          }
           onInit={(swiper) => {
             // @ts-ignore
             swiper.params.navigation.prevEl = navigationPrevRef.current;

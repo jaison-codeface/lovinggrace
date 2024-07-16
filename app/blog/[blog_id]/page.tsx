@@ -20,11 +20,11 @@ import Link from "next/link";
 const page = async ({ params }: any) => {
   const blogs: BlogsType = await getPageContent("blogs");
   const data = blogs.blogs.edges.filter(
-    (item) => item.node.slug === params.blog_id
+    (item) => item.node.slug === params.blog_id,
   )[0];
 
   const index = blogs.blogs.edges.findIndex(
-    (item) => item.node.slug === params.blog_id
+    (item) => item.node.slug === params.blog_id,
   );
 
   const buttons = [

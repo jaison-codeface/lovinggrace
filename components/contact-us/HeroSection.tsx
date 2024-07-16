@@ -6,7 +6,6 @@ import { HeadSubtitle, HeadTitle } from "@/ui/Typography";
 import Image from "next/image";
 import Link from "next/link";
 
-
 const HeroSection = ({ data }: { data: ContactUsPageType }) => {
   return (
     <SectionWrapper

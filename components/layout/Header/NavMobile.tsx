@@ -42,12 +42,13 @@ const NavMobile = ({
   return (
     <>
       <div className="lg:hidden flex items-center gap-4">
-        <Link  onClick={() => setToggle(false)} href={`${liveLink.link}`} shallow target="_blank">
-          <NormalBtn
-            mode="day"
-           
-            className="bg-transparent"
-          >
+        <Link
+          onClick={() => setToggle(false)}
+          href={`${liveLink.link}`}
+          shallow
+          target="_blank"
+        >
+          <NormalBtn mode="day" className="bg-transparent">
             {liveLink.name}
           </NormalBtn>
         </Link>
@@ -150,12 +151,12 @@ const NavMobile = ({
             </li>
           ))}
         </menu>
-        <Link   onClick={() => setToggle(false)} href={`${forwardToAmazon.link}`} shallow>
-          <NormalBtn
-            mode="day"
-          
-            className="bg-transparent mt-4 "
-          >
+        <Link
+          onClick={() => setToggle(false)}
+          href={`${forwardToAmazon.link}`}
+          shallow
+        >
+          <NormalBtn mode="day" className="bg-transparent mt-4 ">
             {forwardToAmazon.name}
           </NormalBtn>
         </Link>

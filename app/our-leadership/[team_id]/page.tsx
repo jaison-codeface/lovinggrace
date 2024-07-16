@@ -6,17 +6,14 @@ import descriptionExtractor from "@/libs/hooks/descriptionExtractor";
 
 import React from "react";
 
-
-
 const page = async ({ params }: any) => {
   const teams: TeamsType = await getPageContent("teams");
   const data = teams.teams.edges.filter(
-    (item) => item.node.slug === params.team_id
+    (item) => item.node.slug === params.team_id,
   )[0];
 
   const index = teams.teams.edges.findIndex(
-    (item) => item.node.slug === params.team_id
-
+    (item) => item.node.slug === params.team_id,
   );
 
   const buttons = [
@@ -41,7 +38,7 @@ const page = async ({ params }: any) => {
         heroSectionImage={data.node.acf.teamMemberDetails.image.sourceUrl}
         title={data.node.acf.teamMemberDetails.name}
         description={descriptionExtractor(
-          data.node.acf.teamMemberDetails.description
+          data.node.acf.teamMemberDetails.description,
         )}
         position={data.node.acf.teamMemberDetails.designation}
       />

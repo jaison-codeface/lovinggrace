@@ -34,11 +34,7 @@ const About = ({
         />
         <div data-aos="fade-up" data-aos-duration="700">
           <p className="leading-[190%] text-lg">{description}</p>
-          <NormalBtn
-          href={button.link}
-       
-            className="mt-6 max-sm:w-full "
-          >
+          <NormalBtn href={button.link} className="mt-6 max-sm:w-full ">
             {button.title}
           </NormalBtn>
         </div>

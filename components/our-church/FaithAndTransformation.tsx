@@ -14,11 +14,11 @@ const FaithAndTransformation = ({ data }: { data: OurChurchType }) => {
     <SectionWrapper classBottom={`${main_padding.y} flex-col items-center`}>
       <span className="max-w-[820px]">
         <HeadTitle border className="text-center">
-         {data.page.acf.faithAndTransformation.title}
+          {data.page.acf.faithAndTransformation.title}
         </HeadTitle>
       </span>
       <HeadSubtitle className="sm:mt-4 mt-2 text-center max-w-[900px] text-black">
-      {data.page.acf.faithAndTransformation.description}
+        {data.page.acf.faithAndTransformation.description}
       </HeadSubtitle>
       <div className=" lg:mt-16 md:mt-14 mt-6 w-full grid md:grid-cols-2 md:gap-10 gap-6">
         {data.page.acf.faithAndTransformation.contents.map((item, idx) => (

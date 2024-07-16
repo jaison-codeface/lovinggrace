@@ -44,14 +44,15 @@ const LeftContentRightImg = ({
             <div className="flex items-center justify-start md:gap-6 gap-3 md:mt-14 mt-3">
               {btn1?.title && (
                 <Link href={`${btn1?.link}`} shallow className="max-md:w-full">
-                  <NormalBtn className="max-md:w-full sm:text-[1rem]">{btn1?.title}</NormalBtn>
+                  <NormalBtn className="max-md:w-full sm:text-[1rem]">
+                    {btn1?.title}
+                  </NormalBtn>
                 </Link>
               )}
               {btn2?.title && (
                 <Link href={`${btn2?.link}`} shallow className="max-md:w-full">
                   <NormalBtn
                     mode="day"
-                 
                     className="max-md:w-full sm:text-[1rem]"
                   >
                     {btn2?.title}

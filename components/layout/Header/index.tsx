@@ -205,7 +205,6 @@ const Header = ({
             </Link>
           </div>
         </menu>
-     
 
         {/* mobile  */}
 

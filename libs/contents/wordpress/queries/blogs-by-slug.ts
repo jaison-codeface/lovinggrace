@@ -1,5 +1,3 @@
-
-
 const blogsBySlug = `query gg($slug: String!) {
   users(where: {nicename: $slug}) {
     edges {
@@ -27,6 +25,6 @@ const blogsBySlug = `query gg($slug: String!) {
       }
     }
   }
-}`
+}`;
 
-export default blogsBySlug
+export default blogsBySlug;

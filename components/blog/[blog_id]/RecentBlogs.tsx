@@ -22,7 +22,6 @@ const RecentBlogs = ({ data }: { data: BlogsType }) => {
             />
 
             <div className="flex flex-col ">
-            
               <h5 className="text-secondary font-bold line-clamp-1">
                 {item.node.acf.title}
               </h5>

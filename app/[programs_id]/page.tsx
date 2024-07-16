@@ -10,7 +10,7 @@ import React from "react";
 const page = async ({ params }: any) => {
   const data: MinistriesType = await getPageContent(
     "ministries-by-slug",
-    params.programs_id
+    params.programs_id,
   );
 
   const isData = data.pages.nodes[0];

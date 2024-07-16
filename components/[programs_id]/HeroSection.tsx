@@ -34,10 +34,7 @@ const HeroSection = ({
         classBottom={main_padding.y}
         classTop={`${kids_of_excellence && "bg-off-white"}`}
       >
-        <HeroSectionBottom
-          title={title}
-          subtitle={statement}
-        />
+        <HeroSectionBottom title={title} subtitle={statement} />
       </SectionWrapper>
     </section>
   );

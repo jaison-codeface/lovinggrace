@@ -31,7 +31,7 @@ const NormalBtn = ({
             ? "bg-secondary border-secondary text-white hover:bg-transparent hover:border-black hover:text-black duration-300"
             : "bg-white text-black hover:bg-secondary hover:border-secondary hover:text-white duration-300"
         }`,
-        className
+        className,
       )}
     >
       {children}
