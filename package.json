@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "formate": "prettier . --write"
+    
   },
   "dependencies": {
     "aos": "next",
