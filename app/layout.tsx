@@ -18,9 +18,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [blog, utilities]: [BlogsType, UtilitiesType] = await Promise.all([
+  const [blog, utilities, contactUs]: [
+    BlogsType,
+    UtilitiesType,
+    ContactUsPageType,
+  ] = await Promise.all([
     getPageContent("blogs"),
     getPageContent("utilities"),
+    getPageContent("contact-us"),
   ]);
 
   const data: {
@@ -42,6 +47,16 @@ export default async function RootLayout({
       title: string;
       link: string;
     }[];
+    socialMedia: {
+      icon: {
+        sourceUrl: string;
+        mediaDetails: {
+          height: number;
+          width: number;
+        };
+      };
+      link: string;
+    }[];
   } = {
     blogs: blog.blogs.edges,
     logo: utilities.utility.acf.logo.sourceUrl,
@@ -49,6 +64,7 @@ export default async function RootLayout({
     footerLinks: utilities.utility.acf.footerLinks,
     liveLink: utilities.utility.acf.liveLink,
     forwardToAmazon: utilities.utility.acf.forwardToAmazon,
+    socialMedia: contactUs.page.acf.socialMedia.links,
   };
   return (
     <html

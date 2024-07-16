@@ -22,11 +22,31 @@ const Footer = ({
   data: {
     footerLinks: { title: string; link: string }[];
     logo: string;
+    socialMedia: {
+      icon: {
+        sourceUrl: string;
+        mediaDetails: {
+          height: number;
+          width: number;
+        };
+      };
+      link: string;
+    }[];
   };
 }) => {
   const [footerLinks, setFooterLinks] = useState<{
     links: { title: string; link: string }[];
     logo: any;
+    socialMedia: {
+      icon: {
+        sourceUrl: string;
+        mediaDetails: {
+          height: number;
+          width: number;
+        };
+      };
+      link: string;
+    }[];
   }>();
 
   useEffect(() => {
@@ -40,8 +60,9 @@ const Footer = ({
     setFooterLinks({
       links: ministriesSubLinks,
       logo: data.logo,
+      socialMedia: data.socialMedia,
     });
-  }, [data.footerLinks, data.logo]);
+  }, [data.footerLinks, data.logo, data.socialMedia]);
 
   if (!footerLinks?.links && !footerLinks?.logo) return;
 
@@ -91,6 +112,25 @@ const Footer = ({
           Designed by Codeface.
         </p>
 
+        <div className="flex sm:w-max w-full flex-wrap items-center justify-center max-w-full gap-3">
+          {footerLinks.socialMedia.map((item, idx) => (
+            <Link
+              href={`${item.link}`}
+              target="_blank"
+              key={idx}
+              className="bg-off-white rounded-[10px] overflow-hidden flex flex-col items-center justify-start p-2 aspect-square hover:bg-off-white/10 duration-300"
+            >
+              <Image
+                src={item.icon.sourceUrl}
+                alt=""
+                width={40}
+                height={40}
+                loading="lazy"
+                className="h-5 w-auto object-contain"
+              />
+            </Link>
+          ))}
+        </div>
         <div className="flex items-center justify-center gap-4">
           {bottomLinks.map((item, idx) => (
             <Link key={idx} href={item.link} className="text-sm underline ">
